@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "0ec27082-6491-4f21-9f82-c1ed942ac5c7",
+		"name": "Cloud Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"_postman_id": "706d6c34-7769-4c2e-b8be-c2537e0f1f96",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts",
+			"_postman_id": "8037380b-22e7-4d6a-8641-730c6c450fde",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\": \"XXXXXXXXX\",\r\n    \"instance_id\": \"i-123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "Commands",
+			"_postman_id": "54e7a90d-f6fd-485f-a419-06969015e841",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/commands"
+			},
+			"response": []
+		},
+		{
+			"name": "Commands",
+			"_postman_id": "a792775a-9684-4137-a716-f16dadf41be4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/commands"
+			},
+			"response": []
+		},
+		{
+			"name": "Costs",
+			"_postman_id": "13546c83-c602-4a01-9273-7f6dfd0863ec",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/costs"
+			},
+			"response": []
+		},
+		{
+			"name": "Data",
+			"_postman_id": "1aaf4e8c-58ee-418b-ab84-c32d524e2457",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"method\": \"GET\",\r\n    \"service\": \"ec2\",\r\n    \"path\": \"/\",\r\n    \"params\": \"Action=DescribeInstances&Version=2016-11-15\",\r\n    \"content-type\": \"\",\r\n    \"amz-target\": \"\",\r\n    \"payload\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/data?table=test-table",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "test-table"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feedback",
+			"_postman_id": "e3381b05-0a84-4609-abaa-ef7946e6823b",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"4\",\r\n    \"content\": \"4/19 test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/feedback"
+			},
+			"response": []
+		},
+		{
+			"name": "Instances",
+			"_postman_id": "62117478-754f-4596-9993-27ce1099c852",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/instances"
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications",
+			"_postman_id": "b1d072c2-f3c8-4496-a7a9-27c095e931de",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/notifications"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"_postman_id": "8fcb025e-cf4c-4d93-837a-0e1c9f4e8620",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/register"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				],
+				"id": "60aea208-73de-473e-8a25-392ef4ba2ed2"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				],
+				"id": "5ff8a420-e41e-402a-b55b-20b0258adfda"
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "dcb2f808-38f6-461b-9811-1c4d1f15ce7c",
+			"key": "baseUrl",
+			"value": "https://34gwjntjnk.execute-api.us-east-1.amazonaws.com/v1",
+			"type": "string"
+		},
+		{
+			"id": "92da3074-5eee-4fa3-b049-f6a417fe5d3b",
+			"key": "token",
+			"value": "XXXX",
+			"type": "string"
+		}
+	]
+}
