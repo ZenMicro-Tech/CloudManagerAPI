@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "83551cbb-8a0b-438b-a11e-36d8e9ca3bcb",
+		"name": "Cloud Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3208884",
+		"_collection_link": "https://restless-shuttle-741620.postman.co/workspace/AWS~595db6e4-8042-4c91-be80-1e1cac387d21/collection/3208884-83551cbb-8a0b-438b-a11e-36d8e9ca3bcb?action=share&creator=3208884&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/accounts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\": \"XXXXXXXXX\",\r\n    \"instance_id\": \"i-123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/accounts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commands",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/commands",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"commands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commands",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/commands",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"commands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Costs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/costs",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"costs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"method\": \"GET\",\r\n    \"service\": \"ec2\",\r\n    \"path\": \"/\",\r\n    \"params\": \"Action=DescribeInstances&Version=2016-11-15\",\r\n    \"content-type\": \"\",\r\n    \"amz-target\": \"\",\r\n    \"payload\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/data?table=test-table",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "test-table"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feedback",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"4\",\r\n    \"content\": \"4/19 test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/feedback",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instances",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/instances",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/notifications",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cloudmanager-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://34gwjntjnk.execute-api.us-east-1.amazonaws.com/v1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "XXXX",
+			"type": "string"
+		}
+	]
+}
